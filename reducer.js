@@ -20,7 +20,7 @@ function restartTimer() {
   };
 }
 
-function addSecond() {
+function addSeconds() {
   return {
     type: ADD_SECONDS
   };
@@ -85,7 +85,7 @@ function applyAddSeconds(state) {
 const actionCreators = {
   startTimer,
   restartTimer,
-  addSecond
+  addSeconds
 };
 
 export { actionCreators };
