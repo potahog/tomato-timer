@@ -14,7 +14,7 @@ function startTimer() {
   };
 }
 
-function restartTImer() {
+function restartTimer() {
   return {
     type: RESTART_TIMER
   };
@@ -84,9 +84,11 @@ function applyAddSeconds(state) {
 
 const actionCreators = {
   startTimer,
-  restartTImer,
+  restartTimer,
   addSecond
 };
+
+export { actionCreators };
 
 // Export Reducer
 

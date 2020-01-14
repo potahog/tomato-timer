@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, StatusBar } from "react-native";
 import Button from "../Button";
-import reducer from "../../reducer";
 
 export default class Timer extends Component {
   render() {
-    const { isPlaying, elapsedTime, timerDuration } = this.props;
+    const { isPlaying, elapsedTime, timerDuration, startTimer, restartTimer } = this.props;
     return (
       <View style={styles.container}>
         <StatusBar barStyle={"light-content"} />
@@ -15,12 +14,12 @@ export default class Timer extends Component {
         <View style={styles.lower}>
           {!isPlaying && (
             <Button iconName="play-circle" onPress={() => {
-                
+                startTimer();
             }} />
           )}  
           {isPlaying && (
             <Button iconName="stop-circle" onPress={() => {
-                
+                restartTimer();
             }} />
           )}
         </View>
